@@ -1,0 +1,71 @@
+@keyframes start {
+  0% {
+    transform: translateY(-30%);
+  }
+
+  100% {
+    transform: translateY(30%);
+  }
+}
+.body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  font-size: 5rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 30px;
+  font-size: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.level {
+  display: none;
+  font-size: 3rem;
+}
+
+.level.started {
+  display: block;
+  animation: start infinite 1s alternate;
+}
+
+.btn:hover {
+  animation: start infinite 1s alternate;
+}
+
+.btn-start.started {
+  display: none;
+}
+.grids {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grids div {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  border: 2px solid #111;
+}
